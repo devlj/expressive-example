@@ -11,6 +11,8 @@ class RedisConnector
 
     private function starConnectionConfig() : Client {
         return $this->client = new Client([
+            //IP AND PORT FOR THE REDIS CONTAINER,
+            // BOTH CONTAINERS ASSOCIATED TO THE SAME NETWORK
             "host" => '172.19.0.2',
             "port" => 6379
         ]);
